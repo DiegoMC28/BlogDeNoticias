@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EstilosComponent } from './componentes/estilos/estilos.component';
-import { FormularioLoginComponent } from './componentes/formulario-login/formulario-login.component';
+import { EstilosComponent } from './Componentes/estilos/estilos.component';
+import { FormularioLoginComponent } from './Componentes/formulario-login/formulario-login.component';
 
 @NgModule({
   declarations: [

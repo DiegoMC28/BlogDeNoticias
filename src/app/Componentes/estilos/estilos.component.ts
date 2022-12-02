@@ -18,6 +18,7 @@ export class EstilosComponent implements OnInit {
 
   cambiaEstilo(){
     this.estilo = !this.estilo;
+    this.cambiarEstilo.emit(this.estilo);
   }
 
 }

@@ -1,2 +1,4 @@
-<app-estilos ngClass=""></app-estilos>
-<router-outlet></router-outlet>
+<body [ngClass]="{'modoOscuro': modo == true, 'modoClaro': modo == false}">
+    <app-estilos (cambiarEstilo)="modo"></app-estilos>
+    <router-outlet></router-outlet>
+</body>
