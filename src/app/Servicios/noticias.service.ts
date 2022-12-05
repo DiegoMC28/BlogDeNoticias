@@ -36,5 +36,9 @@ export class NoticiasService {
     this._sujetoNoticias$.next([...this._arrayNoticias]);
    }
 
+   public eliminarPregunta(noticia: Noticia){
+    this._arrayNoticias.splice(this._arrayNoticias.indexOf(noticia));
+    this._sujetoNoticias$.next([...this._arrayNoticias]);
+   }
 
 }

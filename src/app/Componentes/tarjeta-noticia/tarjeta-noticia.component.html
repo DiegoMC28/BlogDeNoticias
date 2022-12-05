@@ -1,1 +1,6 @@
-<p>tarjeta-noticia works!</p>
+
+<div class="card bg-dark card-block col-sm-8 ">
+    <h4 class="card-title" [innerText]="noticia.getTitulo | uppercase"></h4>
+    <p class="card-text" [innerText]="noticia.getContenido"></p>
+    <button class="btn btn-outline-danger" (click)="eliminarPregunta()">Borrar noticia</button>
+</div>

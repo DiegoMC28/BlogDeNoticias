@@ -9,6 +9,7 @@ import { FormularioLoginComponent } from './Componentes/formulario-login/formula
 import { FormularioNoticiasComponent } from './Componentes/formulario-noticias/formulario-noticias.component';
 import { TarjetaNoticiaComponent } from './Componentes/tarjeta-noticia/tarjeta-noticia.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

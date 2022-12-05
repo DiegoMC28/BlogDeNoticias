@@ -19,7 +19,7 @@ export class FormularioLoginComponent implements OnInit {
 
   constructor(private router: Router, private servicioUsuarios: UsuariosService) {
     this._arrayUsuarios = [];
-    this.servicioUsuarios.getSujetoUsuarios.subscribe(noticias => this._arrayUsuarios = noticias);
+    this.servicioUsuarios.getSujetoUsuarios.subscribe(usuarios => this._arrayUsuarios = usuarios);
 
    }
 

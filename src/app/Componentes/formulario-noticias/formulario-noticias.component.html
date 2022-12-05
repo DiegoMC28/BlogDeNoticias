@@ -1,26 +1,28 @@
-
-<form novalidate class="abs-center">
+<form [formGroup]="formularioNoticia" novalidate class="abs-center">
     <br><br>
     <div class="card bg-dark card-block col-sm-8 ">
         <div class="form-group">
             <h4>Añade un titulo:</h4>
             <input type="text" 
             class="form-control form-control-lg"
-            formControlName="nombreUsuario"
+            formControlName="txtTitulo"
             >
             <h4>Escriba el contenido:</h4>
             <textarea rows="7" cols="50"
             class="form-control form-control-sm"
-            formControlName="contenido"
+            formControlName="txtContenido"
             ></textarea>
             <br>
+            <button (click)="nuevaNoticia()" class="btn btn-outline-success">Añadir noticia</button>
             <button routerLink="/" class="btn btn-outline-danger">Cerrar sesion</button>
         </div>
         
 
     </div>
 
-
+    
 </form>
+<app-tarjeta-noticia *ngFor="let n in _arrayNoticias" [noticia]="n"></app-tarjeta-noticia>
+
 
 
