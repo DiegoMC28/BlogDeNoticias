@@ -1,0 +1,12 @@
+.abs-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+  }
+h3{
+    color: white;
+}
+h4{
+    color: white;
+}
