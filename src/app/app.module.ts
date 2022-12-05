@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { EstilosComponent } from './Componentes/estilos/estilos.component';
 import { FormularioLoginComponent } from './Componentes/formulario-login/formulario-login.component';
 import { FormularioNoticiasComponent } from './Componentes/formulario-noticias/formulario-noticias.component';
+import { TarjetaNoticiaComponent } from './Componentes/tarjeta-noticia/tarjeta-noticia.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EstilosComponent,
     FormularioLoginComponent,
-    FormularioNoticiasComponent
+    FormularioNoticiasComponent,
+    TarjetaNoticiaComponent
   ],
   imports: [
     BrowserModule,

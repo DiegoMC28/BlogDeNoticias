@@ -13,7 +13,8 @@
             formControlName="txtContraseña"
             >
             <br>
-            <button routerLink="/formularioNoticia"  class="btn btn-outline-success">Iniciar sesion</button>
+            <p class="text-danger" *ngIf="(!formularioLoguin.controls['txtNombreUsuario'].valid || !formularioLoguin.controls['txtContraseña'].valid) && (!formularioLoguin.controls['txtNombreUsuario'].dirty || !formularioLoguin.controls['txtContraseña'].dirty)">Introduce el nombre de usuario y la contraseña</p>
+            <button (click)="iniciarSesion()" class="btn btn-outline-success">Iniciar sesion</button>
         </div>
         
 

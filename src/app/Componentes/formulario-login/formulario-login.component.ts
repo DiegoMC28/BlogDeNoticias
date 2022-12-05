@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Usuario } from 'src/app/Clases/usuario';
+import { Router } from '@angular/router';
 
 import { UsuariosService } from 'src/app/Servicios/usuarios.service';
 
@@ -13,10 +14,10 @@ export class FormularioLoginComponent implements OnInit {
 
   _arrayUsuarios: Usuario[];
   formularioLoguin!: FormGroup;
-  nombreDeUsuario: FormControl = new FormControl('', [Validators.required, Validators.minLength(8)]);
+  nombreDeUsuario: FormControl = new FormControl('', [Validators.required, Validators.minLength(3)]);
   contraseña: FormControl = new FormControl('', [Validators.required, Validators.minLength(8)]);
 
-  constructor(private servicioUsuarios: UsuariosService) {
+  constructor(private router: Router, private servicioUsuarios: UsuariosService) {
     this._arrayUsuarios = [];
     this.servicioUsuarios.getSujetoUsuarios.subscribe(noticias => this._arrayUsuarios = noticias);
 
@@ -33,9 +34,14 @@ export class FormularioLoginComponent implements OnInit {
   }
 
 
-  comprobarUsuario(nombreUsuario: string, contraseña: string){
+  iniciarSesion(){
 
-    this.servicioUsuarios.comprobarUsuario(nombreUsuario, contraseña);
+    if(this.formularioLoguin.controls['txtNombreUsuario'].valid && this.formularioLoguin.controls['txtContraseña'].valid && this.servicioUsuarios.comprobarUsuario(this.formularioLoguin.controls['txtNombreUsuario'].value, this.formularioLoguin.controls['txtContraseña'].value) == true){
+
+      this.router.navigate(['/formularioNoticia']);
+
+    }
+
 
   }
 
