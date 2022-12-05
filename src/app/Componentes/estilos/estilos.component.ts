@@ -16,8 +16,13 @@ export class EstilosComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  cambiaEstilo(){
-    this.estilo = !this.estilo;
+  cambiaEstiloOscuro(){
+    this.estilo = false;
+    this.cambiarEstilo.emit(this.estilo);
+  }
+
+  cambiaEstiloClaro(){
+    this.estilo = true;
     this.cambiarEstilo.emit(this.estilo);
   }
 

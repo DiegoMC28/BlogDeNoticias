@@ -1,4 +1,4 @@
-<app-estilos (cambiarEstilo)="modo"></app-estilos>
-<body [ngClass]="{'bg-dark': modo == true}">
+<body [ngClass]="{'modoOscuro': modo == false, 'modoClaro': modo == true}">
+    <app-estilos (cambiarEstilo)="modo = $event"></app-estilos>
     <router-outlet></router-outlet>
 </body>
