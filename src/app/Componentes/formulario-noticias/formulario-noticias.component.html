@@ -16,11 +16,7 @@
             <button (click)="nuevaNoticia()" class="btn btn-outline-success">Añadir noticia</button>
             <button routerLink="/" class="btn btn-outline-danger">Cerrar sesion</button>
         </div>
-        
-
     </div>
-
-    
 </form>
 <app-tarjeta-noticia *ngFor="let n in _arrayNoticias" [noticia]="n"></app-tarjeta-noticia>
 
