@@ -8,6 +8,7 @@ import { EstilosComponent } from './Componentes/estilos/estilos.component';
 import { FormularioLoginComponent } from './Componentes/formulario-login/formulario-login.component';
 import { FormularioNoticiasComponent } from './Componentes/formulario-noticias/formulario-noticias.component';
 import { TarjetaNoticiaComponent } from './Componentes/tarjeta-noticia/tarjeta-noticia.component';
+import { ContenedorNoticiasComponent } from './Componentes/contenedor-noticias/contenedor-noticias.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { TarjetaNoticiaComponent } from './Componentes/tarjeta-noticia/tarjeta-n
     EstilosComponent,
     FormularioLoginComponent,
     FormularioNoticiasComponent,
-    TarjetaNoticiaComponent
+    TarjetaNoticiaComponent,
+    ContenedorNoticiasComponent
   ],
   imports: [
     BrowserModule,
