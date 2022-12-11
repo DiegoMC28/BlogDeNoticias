@@ -4,10 +4,11 @@ import { ContenedorNoticiasComponent } from './Componentes/contenedor-noticias/c
 import { DetallesComponent } from './Componentes/detalles/detalles.component';
 import { FormularioLoginComponent } from './Componentes/formulario-login/formulario-login.component';
 import { FormularioNoticiasComponent } from './Componentes/formulario-noticias/formulario-noticias.component';
+import { GuardLogueoGuard } from './Guards/guard-logueo.guard';
 
 
 const routes: Routes = [
-{path:'formularioNoticia/:nombreDeUsuario/:contraseña', component: ContenedorNoticiasComponent}, 
+{path:'formularioNoticia/:nombreDeUsuario/:contraseña', component: ContenedorNoticiasComponent, canActivate: [GuardLogueoGuard]}, 
 {path:'', component: FormularioLoginComponent}, 
 {path:'detalles/:titulo/:contenido', component: DetallesComponent}
 ];

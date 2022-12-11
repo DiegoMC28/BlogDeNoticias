@@ -37,7 +37,7 @@ export class FormularioLoginComponent implements OnInit {
 
     if(this.formularioLoguin.controls['txtNombreUsuario'].valid && this.formularioLoguin.controls['txtContraseña'].valid && this.servicioUsuarios.comprobarUsuario(this.formularioLoguin.controls['txtNombreUsuario'].value, this.formularioLoguin.controls['txtContraseña'].value) == true){
 
-      this.router.navigate(['/formularioNoticia']);
+      this.router.navigate(['/formularioNoticia', this.formularioLoguin.controls['txtNombreUsuario'].value, this.formularioLoguin.controls['txtContraseña'].value]);
 
     }
 
