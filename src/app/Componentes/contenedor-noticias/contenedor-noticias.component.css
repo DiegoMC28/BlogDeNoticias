@@ -1,0 +1,21 @@
+.abs-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+  }
+.abs-centerV2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+  }
+h3{
+    color: white;
+}
+h4{
+    color: white;
+}
+button{
+    margin: 5px;
+}

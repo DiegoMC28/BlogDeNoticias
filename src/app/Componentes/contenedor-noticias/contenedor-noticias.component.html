@@ -1,1 +1,2 @@
-<p>contenedor-noticias works!</p>
+<app-formulario-noticias (envioArrayNoticias)="noticias = $event" ></app-formulario-noticias>
+<app-tarjeta-noticia class="abs-centerV2" *ngFor="let n of noticias" [noticia]="n" (envioArrayNoticias)="noticias = $event"></app-tarjeta-noticia>

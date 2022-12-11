@@ -24,13 +24,12 @@ export class FormularioLoginComponent implements OnInit {
    }
 
   ngOnInit(): void {
-
     this.formularioLoguin = new FormGroup({
       txtNombreUsuario: this.nombreDeUsuario,
       txtContraseña: this.contraseña
 
     });
-
+    
   }
 
 

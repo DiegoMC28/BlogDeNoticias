@@ -9,6 +9,7 @@ import { FormularioLoginComponent } from './Componentes/formulario-login/formula
 import { FormularioNoticiasComponent } from './Componentes/formulario-noticias/formulario-noticias.component';
 import { TarjetaNoticiaComponent } from './Componentes/tarjeta-noticia/tarjeta-noticia.component';
 import { ContenedorNoticiasComponent } from './Componentes/contenedor-noticias/contenedor-noticias.component';
+import { DetallesComponent } from './Componentes/detalles/detalles.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ContenedorNoticiasComponent } from './Componentes/contenedor-noticias/c
     FormularioLoginComponent,
     FormularioNoticiasComponent,
     TarjetaNoticiaComponent,
-    ContenedorNoticiasComponent
+    ContenedorNoticiasComponent,
+    DetallesComponent
   ],
   imports: [
     BrowserModule,

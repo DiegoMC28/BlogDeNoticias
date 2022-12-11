@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Noticia } from 'src/app/Clases/noticia';
 import { NoticiasService } from 'src/app/Servicios/noticias.service';
@@ -10,6 +10,7 @@ import { NoticiasService } from 'src/app/Servicios/noticias.service';
 })
 export class FormularioNoticiasComponent implements OnInit {
 
+  @Output() envioArrayNoticias = new EventEmitter<Noticia[]>();
   _arrayNoticias: Noticia[];
   formularioNoticia!: FormGroup;
   titulo: FormControl = new FormControl('', [Validators.required, Validators.minLength(3)]);
@@ -18,13 +19,15 @@ export class FormularioNoticiasComponent implements OnInit {
 
   constructor(private servicioNoticia: NoticiasService) {
 
-    this._arrayNoticias = servicioNoticia.getNoticias;
+    this._arrayNoticias = this.servicioNoticia.getNoticias;
     this.servicioNoticia.getSujetoNoticias$.subscribe(noticias => this._arrayNoticias = noticias);
+    
 
    }
 
   ngOnInit(): void {
-    
+
+    this.envioArrayNoticias.emit(this._arrayNoticias);
     this.formularioNoticia = new FormGroup({
       txtTitulo: this.titulo,
       txtContenido: this.contenido
@@ -37,6 +40,7 @@ export class FormularioNoticiasComponent implements OnInit {
 
     this.servicioNoticia.añadirNoticia(this.formularioNoticia.controls['txtTitulo'].value ,this.formularioNoticia.controls['txtContenido'].value, new Date());
     this._arrayNoticias = this.servicioNoticia.getNoticias;
+    this.envioArrayNoticias.emit(this._arrayNoticias);
 
   }
 
